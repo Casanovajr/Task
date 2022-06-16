@@ -9,6 +9,11 @@ const App = () => {
     {
       id: "1",
       title: "Estudar Programção",
+      completed: false,
+    },
+    {
+      id: "2",
+      title: "Lutar Jiu-Jitsu",
       completed: true,
     },
   ]);
@@ -16,6 +21,7 @@ const App = () => {
   return (
     <>
       <div className="container"></div>
+      <Tasks tasks={tasks} />
     </>
   );
 };
