@@ -19,11 +19,25 @@ const App = () => {
     },
   ]);
 
+  const handleTaskAddition = (taskTitle) => {
+    const newTask = [
+      ...tasks,
+      {
+        title: taskTitle,
+        id: Math.random(10),
+        completed: false,
+      },
+    ];
+
+    setTasks(newTask);
+  };
+
   return (
     <>
-      <div className="container"></div>
-      <AddTask />
-      <Tasks tasks={tasks} />
+      <div className="container">
+        <AddTask handleTaskAddition={handleTaskAddition} />
+        <Tasks tasks={tasks} />
+      </div>
     </>
   );
 };
