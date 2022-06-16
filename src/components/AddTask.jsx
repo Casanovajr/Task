@@ -9,12 +9,12 @@ const AddTask = ({ handleTaskAddition }) => {
   const [inputData, setInputData] = useState("");
 
   const handleInputChange = (e) => {
-    console.log(e.target.value);
     setInputData(e.target.value);
   };
 
   const handleAddTaskClick = () => {
     handleTaskAddition(inputData);
+    setInputData("");
   };
 
   return (
