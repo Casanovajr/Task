@@ -45,7 +45,7 @@ const App = () => {
   };
 
   const handleTaskDeletion = (taskId) => {
-    const newTasks = tasks.filter((task) => task.id != taskId);
+    const newTasks = tasks.filter((task) => task.id !== taskId);
 
     setTasks(newTasks);
   };
